@@ -1,0 +1,9 @@
+An Arduino Uno serves as the circuit's controller, reading two push buttons and managing a 7-segment display to indicate numbers from 0 to 9.
+The 7-segment display comprises seven LEDs configured to represent the numeral "8," with specific segments activated to display any digit, 
+connected to Arduino pins 2-8, and linked to a common ground through a 330Ω resistor to prevent LED damage.
+The buttons facilitate counting operations; the right button, attached to pin 10, increments the count, while the left button, connected to pin 9, decrements it, 
+each with a 10kΩ pull-down resistor to mitigate noise interference.
+The code initializes the counter at zero, incrementing it when the right button is pressed (if below 9) and decrementing it with the left button (if above 0), 
+subsequently updating the display pins to reflect the current digit.
+Button bounce, causing erratic counting, is mitigated by implementing a 200 millisecond pause after each press; if the display remains inactive, 
+it indicates improper grounding, while random counter fluctuations suggest issues with pull-down resistors.
