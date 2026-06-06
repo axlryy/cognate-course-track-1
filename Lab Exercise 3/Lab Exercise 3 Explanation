@@ -1,0 +1,4 @@
+This program takes the input from Arduino pins 2–9 and utilizes a 4x4 keypad to determine which key (0–9, A–D) is pressed. 
+A similar 7-segment display pattern kept in the pattern array is matched by the code when a key is pressed. 
+In order to display the chosen number or letter, the showPattern() function turns the appropriate segments ON and OFF. 
+Therefore, on the 7-segment display, pushing 0–9 shows the relevant digit, while pressing A, B, C, or D shows the corresponding letter patterns.
